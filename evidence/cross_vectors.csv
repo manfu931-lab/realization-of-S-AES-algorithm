@@ -1,0 +1,4 @@
+mode,plaintext_hex,key_hex,ciphertext_hex,status
+S-AES,D728,4AF5,24EC,local_verified
+Double,D728,4AF52D55,A656,local_verified
+Triple,D728,4AF52D551234,B416,local_verified
