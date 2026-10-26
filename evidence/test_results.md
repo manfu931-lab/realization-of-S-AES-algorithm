@@ -1,6 +1,6 @@
 # 五关测试结果
 
-测试环境：Windows，Python 3.13.5。执行 `python -m unittest discover -s tests -v`，6 项测试均通过。以下十六进制数均按大端字节顺序显示。
+测试环境：Windows，Python 3.13.5。执行 `python -m unittest discover -s tests -v`，8 项测试均通过。以下十六进制数均按大端字节顺序显示。
 
 ## 第 1 关：基本测试
 
@@ -8,11 +8,11 @@
 | --- | --- | --- | --- |
 | D728 | 4AF5 | 24EC | D728 |
 
-教材密钥扩展示例：`2D55 → 2D55 / BCE9 / A34A`。另对密钥 `0000`、`4AF5`、`FFFF` 与 256 个分组采样执行加解密往返，全部通过。
+附录 D 密钥扩展示例：`2D55 → 2D55 / BCE9 / A34A`。另对密钥 `0000`、`4AF5`、`FFFF` 与 256 个分组采样执行加解密往返，全部通过。
 
 ## 第 2 关：交叉测试
 
-本机输出向量见 `cross_vectors.csv`。组间实际互测和截图尚未进行，记录表见 `cross_group_template.md`；此处不宣称已经通过异构程序互测。
+本机输出向量见 `cross_vectors.csv`，逐组件参考值和操作步骤见 `component_cross_test.md`。组间实际互测和截图尚未进行，记录表见 `cross_group_template.md`；此处不宣称已经通过异构程序互测。
 
 ## 第 3 关：ASCII
 

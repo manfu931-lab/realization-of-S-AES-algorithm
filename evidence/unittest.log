@@ -1,11 +1,13 @@
+test_appendix_component_examples (test_saes.SAESTests.test_appendix_component_examples) ... ok
+test_appendix_parameters_and_reference_vector (test_saes.SAESTests.test_appendix_parameters_and_reference_vector) ... ok
 test_ascii_padding (test_saes.SAESTests.test_ascii_padding) ... ok
 test_block_roundtrips (test_saes.SAESTests.test_block_roundtrips) ... ok
 test_cbc_and_tamper (test_saes.SAESTests.test_cbc_and_tamper) ... ok
+test_component_trace (test_saes.SAESTests.test_component_trace) ... ok
 test_mitm_true_key_is_candidate (test_saes.SAESTests.test_mitm_true_key_is_candidate) ... ok
 test_multiple_encryption (test_saes.SAESTests.test_multiple_encryption) ... ok
-test_textbook_vector_and_key_schedule (test_saes.SAESTests.test_textbook_vector_and_key_schedule) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 3.001s
+Ran 8 tests in 2.865s
 
 OK

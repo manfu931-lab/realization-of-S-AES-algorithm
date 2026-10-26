@@ -64,6 +64,29 @@ def encrypt_block(plaintext: int, key: int) -> int:
     return _shift_rows(_sub_nibbles(state, SBOX)) ^ round_two
 
 
+def trace_encrypt(plaintext: int, key: int) -> dict[str, int]:
+    """Return each encryption stage for component-level interoperability checks."""
+    _check_word(plaintext)
+    round_zero, round_one, round_two = expand_key(key)
+    trace = {"K0": round_zero, "K1": round_one, "K2": round_two}
+    state = plaintext ^ round_zero
+    trace["AddKey0"] = state
+    state = _sub_nibbles(state, SBOX)
+    trace["SubNib1"] = state
+    state = _shift_rows(state)
+    trace["ShiftRow1"] = state
+    state = _mix_columns(state)
+    trace["MixColumn1"] = state
+    state ^= round_one
+    trace["AddKey1"] = state
+    state = _sub_nibbles(state, SBOX)
+    trace["SubNib2"] = state
+    state = _shift_rows(state)
+    trace["ShiftRow2"] = state
+    trace["Ciphertext"] = state ^ round_two
+    return trace
+
+
 def decrypt_block(ciphertext: int, key: int) -> int:
     _check_word(ciphertext)
     round_zero, round_one, round_two = expand_key(key)

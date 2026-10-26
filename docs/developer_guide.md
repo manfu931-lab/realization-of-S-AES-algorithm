@@ -13,6 +13,7 @@
 | 函数 | 输入 | 输出 |
 | --- | --- | --- |
 | `expand_key(key)` | 16 位密钥 | 三个 16 位轮密钥元组 |
+| `trace_encrypt(plaintext, key)` | 16 位明文与密钥 | 各步状态名称到 16 位整数的字典 |
 | `encrypt_block(plaintext, key)` / `decrypt_block(ciphertext, key)` | 16 位分组与 16 位密钥 | 16 位整数 |
 | `double_encrypt(block, key)` / `double_decrypt(block, key)` | 16 位分组与 32 位 `K1||K2` | 16 位整数 |
 | `triple_encrypt(block, key)` / `triple_decrypt(block, key)` | 16 位分组与 48 位 `K1||K2||K3` | 16 位整数 |
@@ -27,4 +28,4 @@ ASCII 与 CBC 均使用块长 2 字节的 PKCS#7 填充。ASCII 页按 ECB 独�
 
 ## 测试
 
-`python -m unittest discover -s tests -v`。测试含教科书参数与向量、S-AES 多点往返、双重/三重往返、ASCII 边界、CBC 篡改传播、MITM 真密钥候选。
+`python -m unittest discover -s tests -v`。测试含附录 D 参数、参考向量、逐组件状态、S-AES 多点往返、双重/三重往返、ASCII 边界、CBC 篡改传播、MITM 真密钥候选。逐组件输出命令为 `python tools/component_trace.py 1234 2D55`。

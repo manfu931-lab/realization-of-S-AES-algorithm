@@ -23,7 +23,7 @@ python main.py
 | 关卡 | 实现与证据 |
 | --- | --- |
 | 第 1 关：基本测试 | 16 位分组、16 位密钥，GUI 加解密；`D728` / `4AF5` → `24EC` |
-| 第 2 关：交叉测试 | 标准 S-box、GF(2⁴)、列混淆、密钥扩展；可供外组核验的向量见 `evidence/cross_vectors.csv`；组间截图留空 |
+| 第 2 关：交叉测试 | 标准 S-box、GF(2⁴)、列混淆、密钥扩展；逐组件向量见 `evidence/component_cross_test.md`；组间截图留空 |
 | 第 3 关：扩展功能 | ASCII 两字节分组、PKCS#7 填充、Hex 密文 |
 | 第 4 关：多重加密 | 32 位 E(E(P,K1),K2)、中间相遇攻击、48 位 EEE 三重加解密 |
 | 第 5 关：工作模式 | CBC、随机 16 位 IV、显式 IV 共享、密文篡改对照 |
@@ -36,6 +36,7 @@ python main.py
 - [开发手册及接口](docs/developer_guide.md)
 - [五关测试结果](evidence/test_results.md)
 - [组间测试记录](evidence/cross_group_template.md)
+- [附录 D 组件交叉测试](evidence/component_cross_test.md)
 
 在项目根目录运行：
 
