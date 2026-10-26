@@ -12,7 +12,7 @@
 
 ## 第 2 关：交叉测试
 
-本机输出向量见 `cross_vectors.csv`，逐组件参考值和操作步骤见 `component_cross_test.md`。组间实际互测和截图尚未进行，记录表见 `cross_group_template.md`；此处不宣称已经通过异构程序互测。
+本机输出向量见 `cross_vectors.csv`，逐组件参考值和操作步骤见 `component_cross_test.md`。2026-10-26 收到的组间截图显示，在 `K=4AF5, P=D728` 时双方均得到 `C=24EC`，双方程序也都解密回 `D728`，详见 `cross_group_template.md`。对方界面指出这是默认示例，因此还需补一组新选的向量；未核实对方程序语言和系统平台。
 
 ## 第 3 关：ASCII
 
